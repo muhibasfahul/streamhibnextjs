@@ -6,7 +6,7 @@ import { translations, Language, TranslationKey } from '@/lib/translations';
 interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
-  t: (key: TranslationKey) => string;
+  t: (key: TranslationKey) => string | string[];
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
