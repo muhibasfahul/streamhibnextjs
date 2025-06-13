@@ -42,7 +42,7 @@ export function HeroSection() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-  href={heroLinks.tryFree}"
+  href={heroLinks.tryFree}
   target="_blank" // <-- Buka tab baru
   rel="noopener noreferrer"
 >
