@@ -1,3 +1,5 @@
+import { Navbar } from '@/components/navbar' // <-- PASTIKAN IMPORT INI ADA
+import { Footer } from '@/components/footer' 
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
@@ -42,22 +44,27 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
-    <html lang="id" suppressHydrationWarning>
-      <body className={inter.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="light"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <LanguageProvider>
-            {children}
-          </LanguageProvider>
-        </ThemeProvider>
+    <html lang="en" suppressHydrationWarning>
+      <head />
+      <body>
+        <LanguageProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Navbar /> {/* <-- TAMBAHKAN NAVBAR DI SINI */}
+            <main>
+              {children}
+            </main>
+            <Footer /> {/* <-- TAMBAHKAN FOOTER DI SINI */}
+          </ThemeProvider>
+        </LanguageProvider>
       </body>
     </html>
-  );
+  )
 }
