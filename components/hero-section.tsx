@@ -35,7 +35,11 @@ export function HeroSection() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="http://164.92.143.123:5000/">
+              <Link
+  href="http://164.92.143.123:5000/"
+  target="_blank" // <-- Buka tab baru
+  rel="noopener noreferrer"
+>
                 <Button 
                 size="lg" 
                 className="bg-red-500 hover:bg-red-600 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
@@ -44,12 +48,14 @@ export function HeroSection() {
                 {t('tryFree')}
               </Button>
                 </Link>
+              <Link href="#pricing">
              <Button 
                 size="lg" 
                 className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 text-lg font-semibold transition-all duration-300"
               >
                 {t('startToday')}
               </Button>
+                 </Link>
             </div>
 
             {/* Trust Indicators */}
