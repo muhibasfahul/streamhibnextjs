@@ -5,6 +5,12 @@ import { Button } from '@/components/ui/button';
 import { Play, CheckCircle } from 'lucide-react';
 import { useLanguage } from '@/hooks/use-language';
 
+const heroLinks = {
+  tryFree: "http://164.92.143.123:5000/", // Link eksternal untuk Coba Gratis
+  startToday: "#pricing",                 // Link ke pricing
+  startLiveDashboard: "#pricing"          // Link ke pricing juga
+};
+
 export function HeroSection() {
   const { t } = useLanguage();
 
@@ -36,7 +42,7 @@ export function HeroSection() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-  href="http://164.92.143.123:5000/"
+  href={heroLinks.tryFree}"
   target="_blank" // <-- Buka tab baru
   rel="noopener noreferrer"
 >
@@ -48,7 +54,7 @@ export function HeroSection() {
                 {t('tryFree')}
               </Button>
                 </Link>
-              <Link href="#pricing">
+              <Link href="{heroLinks.startToday}">
              <Button 
                 size="lg" 
                 className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 text-lg font-semibold transition-all duration-300"
@@ -118,9 +124,11 @@ export function HeroSection() {
                 </div>
                 
                 <div className="grid grid-cols-2 gap-3">
+                  <Link href={heroLinks.startLiveDashboard}>
                   <Button size="sm" className="bg-green-500 hover:bg-green-600 text-white font-medium">
                     {t('startLive')}
                   </Button>
+                    </Link>
                   <Button size="sm" variant="outline" className="font-medium">
                     {t('setSchedule')}
                   </Button>
