@@ -135,7 +135,7 @@ export const translations = {
     cookiePolicy: "Cookie Policy",
     
     // Dashboard preview
-    dashboardTitle: "StreamHib Dashboard",
+    dashboardTitle: "Simulasi StreamHib Dashboard",
     liveStatus: "Status Live Streaming",
     live247: "LIVE 24/7",
     liveDuration: "Durasi Live",
@@ -290,7 +290,7 @@ export const translations = {
     cookiePolicy: "Cookie Policy",
     
     // Dashboard preview
-    dashboardTitle: "StreamHib Dashboard",
+    dashboardTitle: "StreamHib Dashboard Simulation",
     liveStatus: "Live Streaming Status",
     live247: "LIVE 24/7",
     liveDuration: "Live Duration",
