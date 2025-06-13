@@ -26,7 +26,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     localStorage.setItem('language', lang);
   };
 
-  const t = (key: TranslationKey): string => {
+  const t = (key: TranslationKey): string | string[] => {
     return translations[language][key] || translations.id[key] || key;
   };
 
