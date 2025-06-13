@@ -54,7 +54,7 @@ export function HeroSection() {
                 {t('tryFree')}
               </Button>
                 </Link>
-              <Link href="{heroLinks.startToday}">
+              <Link href={heroLinks.startToday}>
              <Button 
                 size="lg" 
                 className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 text-lg font-semibold transition-all duration-300"
