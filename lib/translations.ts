@@ -92,9 +92,9 @@ export const translations = {
       "Support Banyak Channel Youtube"
     ],
     businessFeatures: [
-      "52 Live, 720p, FPS 30, Bit 2500",
-      "33 Live, 1080p, FPS 30, Bit 6500",
-      "14 Live, 4k, FPS 30, Bit 12000",
+      "40 Live, 720p, FPS 30, Bit 2500",
+      "25 Live, 1080p, FPS 30, Bit 6500",
+      "12 Live, 4k, FPS 30, Bit 12000",
       "Support YouTube & Facebook", 
       "Fitur Penjadwalan Youtube",
       "Bandwith Unlimited",
@@ -247,9 +247,9 @@ export const translations = {
       "Support Many Youtube Channels"
     ],
     businessFeatures: [
-      "52 Live, 720p, FPS 30, Bit 2500",
-      "33 Live, 1080p, FPS 30, Bit 6500", 
-      "14 Live, 4k, FPS 30, Bit 12000",
+      "40 Live, 720p, FPS 30, Bit 2500",
+      "25 Live, 1080p, FPS 30, Bit 6500", 
+      "12 Live, 4k, FPS 30, Bit 12000",
       "Support YouTube & Facebook",
       "YouTube Scheduling Feature", 
       "Unlimited Bandwidth",
