@@ -1,6 +1,7 @@
 export const translations = {
   id: {
     // Navbar
+    tutorial: "tutorial",
     features: "Fitur",
     pricing: "Harga",
     testimonials: "Testimoni",
