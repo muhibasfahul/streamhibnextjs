@@ -93,7 +93,7 @@ export function PricingSection() {
               
               <CardContent className="space-y-6">
                 <ul className="space-y-3">
-                  {plan.features.map((feature: string, featureIndex: number) => (
+                  {plan.features.split(',').map((feature: string, featureIndex: number) => (
                     <li key={featureIndex} className="flex items-center">
                       <Check className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
                       <span className="text-gray-700 dark:text-gray-300 text-sm">
