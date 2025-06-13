@@ -9,7 +9,7 @@ export const translations = {
     
     // Hero Section
     trustedBy: "Sudah Dipercaya 100+ Content Creator",
-    heroTitle: "Live Streaming 24/7",
+    heroTitle: "Live Youtube 24/7",
     heroTitlePart2: "Tanpa Komputer",
     heroTitlePart3: "— Server Kami yang Handle!",
     heroDescription: "Bosan komputer overheat? HP cepat rusak? Internet sering putus?",
@@ -108,7 +108,7 @@ export const translations = {
     contactSales: "Pilih Paket",
     
     // Pricing additional info
-    startingFrom: "Mulai dari Rp210k/bulan",
+    startingFrom: "Mulai dari Rp200k/bulan",
     freeTrialNoCard: "Trial Dulu biar tau",
     activeIn5Min: "Aktif dalam 5 menit!",
     tryFreeNow: "🔥 Coba Gratis Sekarang",
@@ -164,7 +164,7 @@ export const translations = {
     
     // Hero Section
     trustedBy: "Trusted by 100+ Content Creators",
-    heroTitle: "24/7 Live Streaming",
+    heroTitle: "24/7 Youtube Live Streaming",
     heroTitlePart2: "Without Computer",
     heroTitlePart3: "— Our Server Handles It!",
     heroDescription: "Tired of computer overheating? Phone battery draining? Internet disconnections?",
