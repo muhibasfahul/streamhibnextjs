@@ -1,12 +1,14 @@
 "use client";
 
+import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 import { Star, Quote } from 'lucide-react';
 import { useLanguage } from '@/hooks/use-language';
 
 const testimonials = [
   {
-    name: "Andi S.",
+    name: "Lisa P.",
+    avatar: "/avatars/lisa.jpg",
     channel: "Relaxing Music ID",
     content: {
       id: "Udah 1 bulan live nonstop, gila sih! Dulu pakai komputer sendiri, 2 hari udah overheat. Sekarang tenang banget, tinggal cek dari HP doang.",
@@ -20,6 +22,7 @@ const testimonials = [
   },
   {
     name: "Maya R.",
+    avatar: "/avatars/maya.jpg",
     channel: "ASMR Hujan",
     content: {
       id: "Pernah pakai yang lain, 3 hari mati. Pindah ke StreamHib, udah 2 minggu lancar jaya! Channel ASMR gue sekarang live 24/7 tanpa drama.",
@@ -33,6 +36,7 @@ const testimonials = [
   },
   {
     name: "Budi T.",
+    avatar: "/avatars/budi.jpg",
     channel: "Lo-Fi Beats",
     content: {
       id: "Cuma modal HP dan dashboard ini, live terus jalan. Subscriber naik terus karena selalu ada konten. ROI-nya gila!",
@@ -46,6 +50,7 @@ const testimonials = [
   },
   {
     name: "Sari K.",
+    avatar: "/avatars/sari.jpg",
     channel: "Nature Sounds",
     content: {
       id: "Sebagai content creator yang sibuk kerja, StreamHib life saver banget. Set jadwal sekali, live otomatis jalan pas jam prime time.",
@@ -59,6 +64,7 @@ const testimonials = [
   },
   {
     name: "Doni P.",
+    avatar: "/avatars/doni.jpg",
     channel: "Chill Vibes",
     content: {
       id: "Server stabil parah, dashboard gampang banget dipahami. Yang paling penting, live streaming gak pernah putus-putus lagi.",
@@ -71,7 +77,8 @@ const testimonials = [
     }
   },
   {
-    name: "Lisa M.",
+    name: "Khoirun Nisa",
+    avatar: "/avatars/nisa.png",
     channel: "Study Music",
     content: {
       id: "Perfect banget buat channel musik study. Viewers selalu ada karena live 24/7. Engagement naik 300% sejak pakai StreamHib!",
@@ -127,11 +134,13 @@ export function TestimonialsSection() {
                 </div>
                 
                 <div className="flex items-center">
-                  <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-red-500 rounded-full flex items-center justify-center">
-                    <span className="text-white font-semibold text-sm">
-                      {testimonial.name.charAt(0)}
-                    </span>
-                  </div>
+                  <Image
+    src={testimonial.avatar}
+    alt={`Avatar of ${testimonial.name}`}
+    width={40}
+    height={40}
+    className="w-10 h-10 rounded-full object-cover"
+  />
                   <div className="ml-3">
                     <p className="font-semibold text-gray-900 dark:text-white text-sm">
                       {testimonial.name}
