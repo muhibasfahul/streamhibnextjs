@@ -26,7 +26,7 @@ export default function PaymentSuccessPage() {
       checkboxLabel: 'Saya telah membaca dan setuju dengan',
       termsLink: 'Syarat dan Ketentuan',
       buttonWhatsApp: 'Hubungi via WhatsApp',
-      buttonTelegram: 'Gabung Grup Telegram',
+      buttonTelegram: 'Hubungi via Telegram',
     },
     en: {
       title: 'Payment Successful!',
@@ -34,14 +34,14 @@ export default function PaymentSuccessPage() {
       checkboxLabel: 'I have read and agree to the',
       termsLink: 'Terms and Conditions',
       buttonWhatsApp: 'Contact via WhatsApp',
-      buttonTelegram: 'Join Telegram Group',
+      buttonTelegram: 'Contact via Telegram',
     },
   };
 
   const t = translations[language] || translations.id;
 
   return (
-    <main className="min-h-[80vh] flex items-center justify-center bg-gray-50 dark:bg-background px-4">
+    <main className="flex items-center justify-center bg-gray-50 dark:bg-background px-4 py-24 sm:py-32">
       <div className="max-w-md w-full mx-auto text-center bg-white dark:bg-card shadow-lg rounded-xl p-8 space-y-6">
         
         <CheckCircle className="h-16 w-16 text-green-500 mx-auto animate-pulse" />
