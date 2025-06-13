@@ -46,7 +46,7 @@ export function Footer() {
             <h3 className="font-semibold text-white mb-4">{t('support')}</h3>
             <ul className="space-y-2">
               <li><a href="mailto:support@streamhib.com" className="text-gray-300 hover:text-white transition-colors">{t('emailSupport')}</a></li>
-              <li><a href="https://wa.me/6281234567890" className="text-gray-300 hover:text-white transition-colors">{t('whatsappSupport')}</a></li>
+              <li><a href="https://wa.me/6285722165165" className="text-gray-300 hover:text-white transition-colors">{t('whatsappSupport')}</a></li>
               <li><a href="#" className="text-gray-300 hover:text-white transition-colors">{t('knowledgeBase')}</a></li>
               <li><a href="#" className="text-gray-300 hover:text-white transition-colors">{t('statusPage')}</a></li>
             </ul>
