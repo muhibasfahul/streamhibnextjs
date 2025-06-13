@@ -35,7 +35,11 @@ export function HeroSection() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="http://164.92.143.123:5000/"> {/* <-- MASUKKAN LINK ANDA DI SINI */}
+              <Link
+  href="http://164.92.143.123:5000/"
+  target="_blank"
+  rel="noopener noreferrer"
+>
   <Button size="lg" className="bg-red-500 ...">
     <Play className="w-5 h-5 mr-2" />
     {t('tryFree')}
