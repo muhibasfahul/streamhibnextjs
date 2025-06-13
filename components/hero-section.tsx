@@ -41,19 +41,15 @@ export function HeroSection() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-  href={heroLinks.tryFree}
-  target="_blank" // <-- Buka tab baru
-  rel="noopener noreferrer"
->
                 <Button 
                 size="lg" 
                 className="bg-red-500 hover:bg-red-600 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+                onClick={() => window.open(heroLinks.tryFree, '_blank')}
               >
                 <Play className="w-5 h-5 mr-2" />
                 {t('tryFree')}
               </Button>
-                </Link>
+               
               <Link href={heroLinks.startToday}>
              <Button 
                 size="lg" 
