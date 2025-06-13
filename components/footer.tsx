@@ -47,8 +47,6 @@ export function Footer() {
             <ul className="space-y-2">
               <li><a href="mailto:support@streamhib.com" className="text-gray-300 hover:text-white transition-colors">{t('emailSupport')}</a></li>
               <li><a href="https://wa.me/6285722165165" className="text-gray-300 hover:text-white transition-colors">{t('whatsappSupport')}</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">{t('knowledgeBase')}</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">{t('statusPage')}</a></li>
             </ul>
           </div>
         </div>
@@ -58,9 +56,9 @@ export function Footer() {
             {t('allRightsReserved')}
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">{t('privacyPolicy')}</a>
+            <a href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">{t('privacyPolicy')}</a>
             <a href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">{t('termsOfService')}</a>
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">{t('cookiePolicy')}</a>
+            <a href="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">{t('cookiePolicy')}</a>
           </div>
         </div>
       </div>
