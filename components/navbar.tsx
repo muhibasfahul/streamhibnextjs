@@ -36,7 +36,7 @@ export function Navbar() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <a href="/tutorial" className="text-sm font-medium hover:text-primary transition-colors">
-              {t('tutorial')}
+              Tutorial
             </a>
             <a href="#features" className="text-sm font-medium hover:text-primary transition-colors">
               {t('features')}
@@ -82,7 +82,7 @@ export function Navbar() {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t">
               <a href="/tutorial" className="block px-3 py-2 text-sm font-medium hover:text-primary transition-colors">
-                {t('tutorial')}
+                Tutorial
               </a>
               <a href="#features" className="block px-3 py-2 text-sm font-medium hover:text-primary transition-colors">
                 {t('features')}
