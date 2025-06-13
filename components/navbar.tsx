@@ -8,6 +8,10 @@ import { LanguageSwitcher } from '@/components/language-switcher';
 import { Menu, X } from 'lucide-react';
 import { useLanguage } from '@/hooks/use-language';
 
+const navLinks = {
+  register: "#pricing", // Sesuai permintaan Anda, tombol 'Mulai Sekarang' mengarah ke pricing
+};
+
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t } = useLanguage();
@@ -48,9 +52,11 @@ export function Navbar() {
           <div className="hidden md:flex items-center space-x-4">
             <LanguageSwitcher />
             <ThemeToggle />
+            <Link href={navLinks.register}>
             <Button size="sm" className="bg-red-500 hover:bg-red-600 text-white px-6 py-2 font-semibold">
               {t('startNow')}
             </Button>
+            </Link>
           </div>
 
           {/* Mobile Actions - Language and Theme Toggle */}
