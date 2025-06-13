@@ -35,16 +35,15 @@ export function HeroSection() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-  href="http://164.92.143.123:5000/"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <Button size="lg" className="bg-red-500 ...">
-    <Play className="w-5 h-5 mr-2" />
-    {t('tryFree')}
-  </Button>
-</Link>
+              <Link href="http://164.92.143.123:5000/">
+                <Button 
+                size="lg" 
+                className="bg-red-500 hover:bg-red-600 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                <Play className="w-5 h-5 mr-2" />
+                {t('tryFree')}
+              </Button>
+                </Link>
              <Button 
                 size="lg" 
                 className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 text-lg font-semibold transition-all duration-300"
