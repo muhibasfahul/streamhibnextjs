@@ -8,7 +8,7 @@ export const translations = {
     startNow: "🚀 Mulai Sekarang",
     
     // Hero Section
-    trustedBy: "Sudah Dipercaya 100+ Content Creator",
+    trustedBy: "Bikin Live jadi CUAN",
     heroTitle: "Live Youtube 24/7",
     heroTitlePart2: "Tanpa Komputer",
     heroTitlePart3: "— Server Kami yang Handle!",
