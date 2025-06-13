@@ -15,7 +15,7 @@ export const translations = {
     heroDescription: "Bosan komputer overheat? HP cepat rusak? Internet sering putus?",
     heroDescriptionBold: "StreamHib solusinya!",
     heroDescriptionContinue: "Upload video sekali, live streaming jalan terus dari server kami. Bahkan saat kamu tidur.",
-    tryFree: "Coba Gratis 7 Hari",
+    tryFree: "Coba Gratis",
     startToday: "🚀 Mulai Live Hari Ini",
     activeChannels: "100+ Channel Aktif",
     rating: "4.9/5 Rating",
@@ -57,26 +57,27 @@ export const translations = {
     // Pricing
     pricingTitle: "Harga yang Masuk Akal untuk Hasil yang Gak Masuk Akal",
     pricingDesc: "Mulai dari Rp200k/bulan, kamu udah bisa live streaming 24/7 tanpa ribet. Lebih murah dari beli komputer baru yang bakal overheat lagi.",
-    specialOffer: "🔥 Coba gratis 7 hari, gak perlu kartu kredit!",
+    specialOffer: "🔥 Cek Berkala, Kode Promo akan diumumkan di sini!",
     mostPopular: "🔥 Paling Laris",
     
     // Plan names and descriptions
     starterName: "Set 1",
-    starterDesc: "Buat kamu yang baru mau coba live streaming 24/7",
+    starterDesc: "Buat yang baru mau coba live 24/7",
     proName: "Set 2", 
-    proDesc: "Untuk content creator serius yang mau scale up",
+    proDesc: "Untuk creator serius yang mau scale up",
     businessName: "Set 3",
-    businessDesc: "Solusi lengkap untuk agency atau tim besar",
+    businessDesc: "Solusi lengkap",
     
     // Plan features
     starterFeatures: [
-      "10 Live, 720p, FPS 30, Bit 2500",
-      "8 Live, 1080p, FPS 30, Bit 6500", 
-      "Sewaktu-waktu IP Berubah",
+      "15 Live, 720p, FPS 30, Bit 2500",
+      "12 Live, 1080p, FPS 30, Bit 6500",
+      "5 Live, 4k, FPS 30, Bit 12000", 
       "Support YouTube & Facebook",
       "Fitur Penjadwalan Youtube",
-      "Memakai Server DO",
-      "Penyimpanan 60GB",
+      "Bandwith 20 TB (Sangat Cukup)",
+      "Stabil & IP Tidak Berubah",
+      "Penyimpanan 40GB",
       "Support Banyak Channel Youtube"
     ],
     proFeatures: [
@@ -85,8 +86,9 @@ export const translations = {
       "8 Live, 4k, FPS 30, Bit 12000", 
       "Support YouTube & Facebook",
       "Fitur Penjadwalan Youtube",
-      "Lebih Stabil & IP Tidak Berubah",
-      "Penyimpanan 40GB",
+      "Bandwith Unlimited",
+      "Stabil & IP Tidak Berubah",
+      "Penyimpanan 60GB",
       "Support Banyak Channel Youtube"
     ],
     businessFeatures: [
@@ -95,18 +97,19 @@ export const translations = {
       "14 Live, 4k, FPS 30, Bit 12000",
       "Support YouTube & Facebook", 
       "Fitur Penjadwalan Youtube",
-      "Lebih Stabil & IP Tidak Berubah",
-      "Penyimpanan 80GB",
+      "Bandwith Unlimited",
+      "Stabil & IP Tidak Berubah",
+      "Penyimpanan 120GB",
       "Support Banyak Channel Youtube"
     ],
     
     // Pricing CTA
     selectPlan: "Pilih Paket",
-    contactSales: "Hubungi Sales",
+    contactSales: "Pilih Paket",
     
     // Pricing additional info
-    startingFrom: "Mulai dari Rp200k/bulan",
-    freeTrialNoCard: "Gratis 7 hari, tanpa kartu kredit",
+    startingFrom: "Mulai dari Rp210k/bulan",
+    freeTrialNoCard: "Trial Dulu biar tau",
     activeIn5Min: "Aktif dalam 5 menit!",
     tryFreeNow: "🔥 Coba Gratis Sekarang",
     startLiveToday: "🚀 Mulai Live Hari Ini",
@@ -126,7 +129,7 @@ export const translations = {
     support: "Support",
     knowledgeBase: "Knowledge Base",
     statusPage: "Status Page",
-    allRightsReserved: "© 2024 StreamHib. All rights reserved.",
+    allRightsReserved: "© 2025 StreamHib. All rights reserved.",
     privacyPolicy: "Privacy Policy",
     termsOfService: "Terms of Service",
     cookiePolicy: "Cookie Policy",
@@ -167,7 +170,7 @@ export const translations = {
     heroDescription: "Tired of computer overheating? Phone battery draining? Internet disconnections?",
     heroDescriptionBold: "StreamHib is the solution!",
     heroDescriptionContinue: "Upload video once, live streaming runs continuously from our server. Even while you sleep.",
-    tryFree: "Try Free 7 Days",
+    tryFree: "Try Free",
     startToday: "🚀 Start Live Today",
     activeChannels: "100+ Active Channels",
     rating: "4.9/5 Rating",
@@ -209,7 +212,7 @@ export const translations = {
     // Pricing
     pricingTitle: "Reasonable Price for Unreasonable Results",
     pricingDesc: "Starting from Rp200k/month, you can have 24/7 live streaming without hassle. Cheaper than buying a new computer that will overheat again.",
-    specialOffer: "🔥 Try free 7 days, no credit card needed!",
+    specialOffer: "🔥 Check back regularly, Promo Codes will be announced here!",
     mostPopular: "🔥 Most Popular",
     
     // Plan names and descriptions
@@ -218,28 +221,30 @@ export const translations = {
     proName: "Set 2",
     proDesc: "For serious content creators who want to scale up", 
     businessName: "Set 3",
-    businessDesc: "Complete solution for agencies or large teams",
+    businessDesc: "Complete solution",
     
     // Plan features
     starterFeatures: [
-      "10 Live, 720p, FPS 30, Bit 2500",
-      "8 Live, 1080p, FPS 30, Bit 6500",
-      "IP May Change Occasionally", 
+      "15 Live, 720p, FPS 30, Bit 2500",
+      "12 Live, 1080p, FPS 30, Bit 6500",
+      "5 Live, 4k, FPS 30, Bit 12000",
       "Support YouTube & Facebook",
       "YouTube Scheduling Feature",
-      "Using DO Server",
-      "60GB Storage",
-      "Support Multiple YouTube Channels"
+      "20 TB Bandwidth (Very Enough)",
+      "Stable & IP Doesn't Change",
+      "40GB Storage",
+      "Support Many Youtube Channels"
     ],
     proFeatures: [
       "25 Live, 720p, FPS 30, Bit 2500",
       "17 Live, 1080p, FPS 30, Bit 6500",
       "8 Live, 4k, FPS 30, Bit 12000",
-      "Support YouTube & Facebook", 
+      "Support YouTube & Facebook",
       "YouTube Scheduling Feature",
-      "More Stable & IP Doesn't Change",
-      "40GB Storage",
-      "Support Multiple YouTube Channels"
+      "Unlimited Bandwidth",
+      "Stable & IP Doesn't Change",
+      "60GB Storage",
+      "Support Many Youtube Channels"
     ],
     businessFeatures: [
       "52 Live, 720p, FPS 30, Bit 2500",
@@ -247,8 +252,9 @@ export const translations = {
       "14 Live, 4k, FPS 30, Bit 12000",
       "Support YouTube & Facebook",
       "YouTube Scheduling Feature", 
-      "More Stable & IP Doesn't Change",
-      "80GB Storage",
+      "Unlimited Bandwidth",
+      "Stable & IP Doesn't Change",
+      "120GB Storage",
       "Support Multiple YouTube Channels"
     ],
     
@@ -257,8 +263,8 @@ export const translations = {
     contactSales: "Contact Sales",
     
     // Pricing additional info
-    startingFrom: "Starting from Rp200k/month",
-    freeTrialNoCard: "Free 7 days, no credit card",
+    startingFrom: "Starting from IDR 210k/month",
+    freeTrialNoCard: "Try First, You will Know",
     activeIn5Min: "Active in 5 minutes!",
     tryFreeNow: "🔥 Try Free Now",
     startLiveToday: "🚀 Start Live Today", 
@@ -278,7 +284,7 @@ export const translations = {
     support: "Support", 
     knowledgeBase: "Knowledge Base",
     statusPage: "Status Page",
-    allRightsReserved: "© 2024 StreamHib. All rights reserved.",
+    allRightsReserved: "© 2025 StreamHib. All rights reserved.",
     privacyPolicy: "Privacy Policy",
     termsOfService: "Terms of Service", 
     cookiePolicy: "Cookie Policy",
