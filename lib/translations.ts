@@ -163,7 +163,7 @@ export const translations = {
     startNow: "🚀 Start Now",
     
     // Hero Section
-    trustedBy: "Trusted by 100+ Content Creators",
+    trustedBy: "Make live to Make Money",
     heroTitle: "24/7 Youtube Live Streaming",
     heroTitlePart2: "Without Computer",
     heroTitlePart3: "— Our Server Handles It!",
