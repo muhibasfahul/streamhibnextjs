@@ -146,7 +146,7 @@ export function FAQSection() {
                 {t('emailSupport')}
               </a>
               <a 
-                href="https://wa.me/6281234567890" 
+                href="https://wa.me/6285722165165" 
                 className="inline-flex items-center justify-center px-6 py-3 bg-green-500 hover:bg-green-600 text-white font-medium rounded-lg transition-colors duration-300"
               >
                 {t('whatsappSupport')}
