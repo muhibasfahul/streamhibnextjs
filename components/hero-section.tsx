@@ -1,5 +1,6 @@
 "use client";
 
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Play, CheckCircle } from 'lucide-react';
 import { useLanguage } from '@/hooks/use-language';
