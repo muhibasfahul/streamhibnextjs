@@ -48,16 +48,14 @@ export function HeroSection() {
               >
                 <Play className="w-5 h-5 mr-2" />
                 {t('tryFree')}
-              </Button>
-               
-              <Link href={heroLinks.startToday}>
+              </Button> 
              <Button 
                 size="lg" 
                 className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 text-lg font-semibold transition-all duration-300"
+               onClick={() => window.location.href = heroLinks.startToday}
               >
                 {t('startToday')}
               </Button>
-                 </Link>
             </div>
 
             {/* Trust Indicators */}
