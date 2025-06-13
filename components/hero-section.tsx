@@ -123,12 +123,10 @@ export function HeroSection() {
                   </div>
                 </div>
                 
-                <div className="grid grid-cols-2 gap-3">
-                  <Link href={heroLinks.startLiveDashboard}>
+                <div className="grid grid-cols-2 gap-3">                
                   <Button size="sm" className="bg-green-500 hover:bg-green-600 text-white font-medium">
                     {t('startLive')}
-                  </Button>
-                    </Link>
+                  </Button>                    
                   <Button size="sm" variant="outline" className="font-medium">
                     {t('setSchedule')}
                   </Button>
