@@ -27,8 +27,20 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   };
 
   const t = (key: TranslationKey): string | string[] => {
-    return translations[language][key] || translations.id[key] || key;
-  };
+  // Ambil dulu 'kamus' untuk bahasa yang sedang dipilih (misal: 'en')
+  const selectedLanguageSet = translations[language];
+
+  // Cek secara eksplisit: Apakah kata kunci (key) ini ada di dalam kamus yang dipilih?
+  // 'in' adalah operator JavaScript yang aman untuk mengecek keberadaan properti.
+  if (key in selectedLanguageSet) {
+    // Jika ada, langsung kembalikan terjemahannya. TypeScript sekarang yakin.
+    return selectedLanguageSet[key];
+  }
+  
+  // Jika tidak ada di kamus yang dipilih, baru ambil dari kamus default ('id')
+  // atau kembalikan kuncinya sendiri jika di 'id' juga tidak ada.
+  return translations.id[key] || key;
+};
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage: handleSetLanguage, t }}>
