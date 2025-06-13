@@ -9,6 +9,7 @@ const subscriptionLinks = {
   starter: "https://streamhib.myr.id/pl/set-1-streamhib-lengkap-fitur-jadwal-live",
   pro: "https://streamhib.myr.id/pl/set-2-streamhib-lengkap-fitur-jadwal-live",
   business: "https://streamhib.myr.id/pl/set-3-streamhib-lengkap-fitur-jadwal-live",
+  trial:"http://164.92.143.123:5000",
 };
 
 export function PricingSection() {
@@ -148,14 +149,14 @@ export function PricingSection() {
             <Button 
               size="lg" 
               className="bg-red-500 hover:bg-red-600 text-white px-12 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 mr-4"
-              onClick={() => window.open(subscriptionLinks.starter, '_blank')}
+              onClick={() => window.open(subscriptionLinks.trial, '_blank')}
             >
               {t('tryFreeNow')}
             </Button>
             <Button 
               size="lg" 
               className="bg-blue-500 hover:bg-blue-600 text-white px-12 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
-              onClick={() => window.open(subscriptionLinks.pro, '_blank')}
+              
             >
               {t('startLiveToday')}
             </Button>
