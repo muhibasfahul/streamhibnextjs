@@ -45,11 +45,12 @@ export function HeroSection() {
     {t('tryFree')}
   </Button>
 </Link>
-              <Link href="/pricing"> {/* <-- LINK KE HALAMAN HARGA */}
-  <Button size="sm" className="bg-red-500 ...">
-    {t('startNow')}
-  </Button>
-</Link>
+             <Button 
+                size="lg" 
+                className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 text-lg font-semibold transition-all duration-300"
+              >
+                {t('startToday')}
+              </Button>
             </div>
 
             {/* Trust Indicators */}
