@@ -6,7 +6,7 @@ import { Play, CheckCircle } from 'lucide-react';
 import { useLanguage } from '@/hooks/use-language';
 
 const heroLinks = {
-  tryFree: "http://164.92.143.123:5000/", // Link eksternal untuk Coba Gratis
+  tryFree: "http://207.154.236.160:5000/", // Link eksternal untuk Coba Gratis
   startToday: "#pricing",                 // Link ke pricing
   startLiveDashboard: "#pricing"          // Link ke pricing juga
 };
