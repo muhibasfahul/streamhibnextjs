@@ -9,9 +9,9 @@ export const translations = {
     
     // Hero Section
     trustedBy: "Bikin Live jadi CUAN",
-    heroTitle: "Live Facebook/Youtube 24/7",
+    heroTitle: "Live Youtube 24/7",
     heroTitlePart2: "Tanpa Komputer",
-    heroTitlePart3: "— Server Kami yang Handle!",
+    heroTitlePart3: "— Juga Bisa Live Facebook!",
     heroDescription: "Bosan komputer overheat? HP cepat rusak? Internet sering putus?",
     heroDescriptionBold: "StreamHib solusinya!",
     heroDescriptionContinue: "Upload video sekali, live streaming jalan terus dari server kami. Bahkan saat kamu tidur.",
