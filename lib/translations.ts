@@ -9,7 +9,7 @@ export const translations = {
     
     // Hero Section
     trustedBy: "Bikin Live jadi CUAN",
-    heroTitle: "Live Youtube 24/7",
+    heroTitle: "Live Facebook/Youtube 24/7",
     heroTitlePart2: "Tanpa Komputer",
     heroTitlePart3: "— Server Kami yang Handle!",
     heroDescription: "Bosan komputer overheat? HP cepat rusak? Internet sering putus?",
