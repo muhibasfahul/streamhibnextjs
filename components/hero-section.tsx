@@ -27,9 +27,9 @@ export function HeroSection() {
               </div>
               
               <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
-                <span className="text-blue-600 dark:text-blue-400">{t('heroTitle')}</span>{' '}
+                <span className="text-red-600 dark:text-blue-400">{t('heroTitle')}</span>{' '}
                 <span className="text-gray-900 dark:text-white">{t('heroTitlePart2')}</span>{' '}
-                <span className="text-red-500">{t('heroTitlePart3')}</span>
+                <span className="text-blue-500">{t('heroTitlePart3')}</span>
               </h1>
               
               <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
