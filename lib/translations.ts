@@ -77,7 +77,7 @@ export const translations = {
       "Fitur Penjadwalan Youtube",
       "Bandwith Unlimited",
       "Sistem Pakai Domain",
-      "Penyimpanan 25GB",
+      "Penyimpanan 25GB (Cukup)",
       "Support Banyak Channel Youtube"
     ],
     proFeatures: [
@@ -88,7 +88,7 @@ export const translations = {
       "Fitur Penjadwalan Youtube",
       "Bandwith Unlimited",
       "Sistem Pakai Domain",
-      "Penyimpanan 37GB",
+      "Penyimpanan 37GB(Sangat Cukup)",
       "Support Banyak Channel Youtube"
     ],
     businessFeatures: [
@@ -99,7 +99,7 @@ export const translations = {
       "Fitur Penjadwalan Youtube",
       "Bandwith Unlimited",
       "Sistem Pakai Domain",
-      "Penyimpanan 77GB",
+      "Penyimpanan 77GB (Lebih Dari Cukup)",
       "Support Banyak Channel Youtube"
     ],
     
