@@ -71,13 +71,13 @@ export const translations = {
     // Plan features
     starterFeatures: [
       "15 Live, 720p, FPS 30, Bit 2500",
-      "12 Live, 1080p, FPS 30, Bit 6500",
+      "10 Live, 1080p, FPS 30, Bit 6500",
       "5 Live, 4k, FPS 30, Bit 12000", 
       "Support YouTube & Facebook",
       "Fitur Penjadwalan Youtube",
-      "Bandwith 20 TB (Sangat Cukup)",
-      "Stabil & IP Tidak Berubah",
-      "Penyimpanan 40GB",
+      "Bandwith Unlimited",
+      "Sistem Pakai Domain",
+      "Penyimpanan 25GB",
       "Support Banyak Channel Youtube"
     ],
     proFeatures: [
@@ -87,8 +87,8 @@ export const translations = {
       "Support YouTube & Facebook",
       "Fitur Penjadwalan Youtube",
       "Bandwith Unlimited",
-      "Stabil & IP Tidak Berubah",
-      "Penyimpanan 60GB",
+      "Sistem Pakai Domain",
+      "Penyimpanan 37GB",
       "Support Banyak Channel Youtube"
     ],
     businessFeatures: [
@@ -98,8 +98,8 @@ export const translations = {
       "Support YouTube & Facebook", 
       "Fitur Penjadwalan Youtube",
       "Bandwith Unlimited",
-      "Stabil & IP Tidak Berubah",
-      "Penyimpanan 120GB",
+      "Sistem Pakai Domain",
+      "Penyimpanan 77GB",
       "Support Banyak Channel Youtube"
     ],
     
@@ -112,7 +112,7 @@ export const translations = {
     freeTrialNoCard: "Trial Dulu biar tau",
     activeIn5Min: "Aktif dalam 5 menit!",
     tryFreeNow: "🔥 Coba Gratis Sekarang",
-    startLiveToday: "🚀 Mulai Live Hari Ini",
+    startLiveToday: "💬 Hubungi Admin Untuk Kebutuhan Lebih",
     setupNote: "💡 Setup cuma 5 menit, langsung bisa live streaming 24/7",
     
     // FAQ
@@ -226,13 +226,13 @@ export const translations = {
     // Plan features
     starterFeatures: [
       "15 Live, 720p, FPS 30, Bit 2500",
-      "12 Live, 1080p, FPS 30, Bit 6500",
+      "10 Live, 1080p, FPS 30, Bit 6500",
       "5 Live, 4k, FPS 30, Bit 12000",
       "Support YouTube & Facebook",
       "YouTube Scheduling Feature",
-      "20 TB Bandwidth (Very Enough)",
-      "Stable & IP Doesn't Change",
-      "40GB Storage",
+      "Unlimited Bandwidth",
+      "Domain System used",
+      "25GB Storage",
       "Support Many Youtube Channels"
     ],
     proFeatures: [
@@ -242,8 +242,8 @@ export const translations = {
       "Support YouTube & Facebook",
       "YouTube Scheduling Feature",
       "Unlimited Bandwidth",
-      "Stable & IP Doesn't Change",
-      "60GB Storage",
+      "Domain System used",
+      "37GB Storage",
       "Support Many Youtube Channels"
     ],
     businessFeatures: [
@@ -253,8 +253,8 @@ export const translations = {
       "Support YouTube & Facebook",
       "YouTube Scheduling Feature", 
       "Unlimited Bandwidth",
-      "Stable & IP Doesn't Change",
-      "120GB Storage",
+      "Domain System used",
+      "77GB Storage",
       "Support Multiple YouTube Channels"
     ],
     
@@ -267,7 +267,7 @@ export const translations = {
     freeTrialNoCard: "Try First, You will Know",
     activeIn5Min: "Active in 5 minutes!",
     tryFreeNow: "🔥 Try Free Now",
-    startLiveToday: "🚀 Start Live Today", 
+    startLiveToday: "💬 Need More, Contact Admin", 
     setupNote: "💡 Setup only 5 minutes, immediately ready for 24/7 live streaming",
     
     // FAQ
