@@ -9,7 +9,7 @@ const subscriptionLinks = {
   starter: "https://streamhib.myr.id/pl/set-1-streamhib-lengkap-fitur-jadwal-live",
   pro: "https://streamhib.myr.id/pl/set-2-streamhib-lengkap-fitur-jadwal-live",
   business: "https://streamhib.myr.id/pl/set-3-streamhib-lengkap-fitur-jadwal-live",
-  trial:"http://164.92.143.123:5000",
+  trial:"http://207.154.236.160:5000",
 };
 
 export function PricingSection() {
