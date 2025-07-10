@@ -1,5 +1,4 @@
 ---
-import { Image } from 'astro:assets';
 ---
 
 <nav class="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -129,21 +128,21 @@ import { Image } from 'astro:assets';
       }
     };
 
-    const t = translations[language] || translations.id;
+    const t = translations[language as keyof typeof translations] || translations.id;
 
     // Update desktop nav
-    document.querySelector('.nav-features').textContent = t.features;
-    document.querySelector('.nav-pricing').textContent = t.pricing;
-    document.querySelector('.nav-testimonials').textContent = t.testimonials;
-    document.querySelector('.nav-faq').textContent = t.faq;
-    document.querySelector('.nav-start-now').textContent = t.startNow;
+    document.querySelector('.nav-features')!.textContent = t.features;
+    document.querySelector('.nav-pricing')!.textContent = t.pricing;
+    document.querySelector('.nav-testimonials')!.textContent = t.testimonials;
+    document.querySelector('.nav-faq')!.textContent = t.faq;
+    document.querySelector('.nav-start-now')!.textContent = t.startNow;
 
     // Update mobile nav
-    document.querySelector('.nav-features-mobile').textContent = t.features;
-    document.querySelector('.nav-pricing-mobile').textContent = t.pricing;
-    document.querySelector('.nav-testimonials-mobile').textContent = t.testimonials;
-    document.querySelector('.nav-faq-mobile').textContent = t.faq;
-    document.querySelector('.nav-start-now-mobile').textContent = t.startNow;
+    document.querySelector('.nav-features-mobile')!.textContent = t.features;
+    document.querySelector('.nav-pricing-mobile')!.textContent = t.pricing;
+    document.querySelector('.nav-testimonials-mobile')!.textContent = t.testimonials;
+    document.querySelector('.nav-faq-mobile')!.textContent = t.faq;
+    document.querySelector('.nav-start-now-mobile')!.textContent = t.startNow;
   }
 
   // Update on page load

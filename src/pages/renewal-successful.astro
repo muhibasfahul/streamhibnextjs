@@ -97,7 +97,7 @@ import Footer from '../components/Footer.astro';
 
   function updateRenewalContent() {
     const language = localStorage.getItem('language') || 'id';
-    const t = translations[language] || translations.id;
+    const t = translations[language as keyof typeof translations] || translations.id;
 
     // Update elements
     const titleElement = document.querySelector('.renewal-title');
@@ -125,12 +125,12 @@ import Footer from '../components/Footer.astro';
 
   // Checkbox and button functionality
   const checkbox = document.getElementById('terms-agreement');
-  const whatsappButton = document.getElementById('whatsapp-button');
-  const telegramButton = document.getElementById('telegram-button');
+  const whatsappButton = document.getElementById('whatsapp-button') as HTMLButtonElement;
+  const telegramButton = document.getElementById('telegram-button') as HTMLButtonElement;
 
   if (checkbox && whatsappButton && telegramButton) {
-    checkbox.addEventListener('change', (e) => {
-      const isChecked = e.target.checked;
+    checkbox.addEventListener('change', (e: Event) => {
+      const isChecked = (e.target as HTMLInputElement).checked;
       whatsappButton.disabled = !isChecked;
       telegramButton.disabled = !isChecked;
       

@@ -2,8 +2,6 @@
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
-import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
-import { Video } from 'lucide-react';
 ---
 
 <Layout title="Tutorial - StreamHib" description="Panduan lengkap penggunaan StreamHib untuk live streaming 24/7">
@@ -64,7 +62,7 @@ import { Video } from 'lucide-react';
 
   function updateTutorialContent() {
     const language = localStorage.getItem('language') || 'id';
-    const t = tutorialsData[language] || tutorialsData.id;
+    const t = tutorialsData[language as keyof typeof tutorialsData] || tutorialsData.id;
 
     // Update page title
     const titleElement = document.querySelector('.tutorial-title');
@@ -77,7 +75,7 @@ import { Video } from 'lucide-react';
     if (tutorialList) {
       tutorialList.innerHTML = '';
       
-      t.tutorials.forEach((tutorial, index) => {
+      t.tutorials.forEach((tutorial: any) => {
         const tutorialItem = document.createElement('a');
         tutorialItem.href = tutorial.url;
         tutorialItem.target = '_blank';

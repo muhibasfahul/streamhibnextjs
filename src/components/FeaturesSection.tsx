@@ -9,11 +9,11 @@ import {
 } from 'lucide-react';
 import { useStore } from '@nanostores/react';
 import { languageStore } from '../stores/language';
-import { translations } from '../lib/translations';
+import { translations, type Language } from '../lib/translations';
 
 export function FeaturesSection() {
   const language = useStore(languageStore);
-  const t = (key: keyof typeof translations.id) => translations[language][key] || translations.id[key];
+  const t = (key: keyof typeof translations.id) => translations[language as Language][key] || translations.id[key];
 
   const features = [
     {

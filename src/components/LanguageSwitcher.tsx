@@ -2,12 +2,13 @@ import { Globe } from 'lucide-react';
 import { Button } from './ui/button';
 import { useStore } from '@nanostores/react';
 import { languageStore } from '../stores/language';
+import type { Language } from '../lib/translations';
 
 export function LanguageSwitcher() {
   const language = useStore(languageStore);
 
   const toggleLanguage = () => {
-    languageStore.set(language === 'id' ? 'en' : 'id');
+    languageStore.set(language === 'id' ? 'en' as Language : 'id' as Language);
   };
 
   return (

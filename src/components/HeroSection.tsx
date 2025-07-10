@@ -2,7 +2,7 @@ import { Play, CheckCircle } from 'lucide-react';
 import { Button } from './ui/button';
 import { useStore } from '@nanostores/react';
 import { languageStore } from '../stores/language';
-import { translations } from '../lib/translations';
+import { translations, type Language } from '../lib/translations';
 
 const heroLinks = {
   tryFree: "http://207.154.236.160:5000/",
@@ -12,7 +12,7 @@ const heroLinks = {
 
 export function HeroSection() {
   const language = useStore(languageStore);
-  const t = (key: keyof typeof translations.id) => translations[language][key] || translations.id[key];
+  const t = (key: keyof typeof translations.id) => translations[language as Language][key] || translations.id[key];
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-red-50 dark:from-blue-950/20 dark:via-background dark:to-red-950/20">

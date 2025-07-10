@@ -2,7 +2,7 @@ import { Card, CardContent } from './ui/card';
 import { Star, Quote } from 'lucide-react';
 import { useStore } from '@nanostores/react';
 import { languageStore } from '../stores/language';
-import { translations } from '../lib/translations';
+import { translations, type Language } from '../lib/translations';
 
 const testimonials = [
   {
@@ -93,7 +93,7 @@ const testimonials = [
 
 export function TestimonialsSection() {
   const language = useStore(languageStore);
-  const t = (key: keyof typeof translations.id) => translations[language][key] || translations.id[key];
+  const t = (key: keyof typeof translations.id) => translations[language as Language][key] || translations.id[key];
 
   return (
     <section id="testimonials" className="py-20 bg-white dark:bg-background">
@@ -122,14 +122,14 @@ export function TestimonialsSection() {
                     ))}
                   </div>
                   <span className="ml-2 text-sm text-gray-500 dark:text-gray-400 font-medium">
-                    {testimonial.duration[language]}
+                    {testimonial.duration[language as Language]}
                   </span>
                 </div>
                 
                 <div className="relative mb-4">
                   <Quote className="absolute -top-2 -left-2 w-6 h-6 text-blue-500 opacity-20" />
                   <p className="text-gray-700 dark:text-gray-300 leading-relaxed pl-4">
-                    "{testimonial.content[language]}"
+                    "{testimonial.content[language as Language]}"
                   </p>
                 </div>
                 

@@ -6,7 +6,7 @@ import {
 } from "./ui/accordion";
 import { useStore } from '@nanostores/react';
 import { languageStore } from '../stores/language';
-import { translations } from '../lib/translations';
+import { translations, type Language } from '../lib/translations';
 
 const faqs = {
   id: [
@@ -97,7 +97,7 @@ const faqs = {
 
 export function FAQSection() {
   const language = useStore(languageStore);
-  const t = (key: keyof typeof translations.id) => translations[language][key] || translations.id[key];
+  const t = (key: keyof typeof translations.id) => translations[language as Language][key] || translations.id[key];
 
   return (
     <section id="faq" className="py-20 bg-white dark:bg-background">
@@ -113,7 +113,7 @@ export function FAQSection() {
 
         <div className="max-w-4xl mx-auto">
           <Accordion type="single" collapsible className="space-y-4">
-            {faqs[language].map((faq, index) => (
+            {faqs[language as Language].map((faq: any, index: number) => (
               <AccordionItem 
                 key={index} 
                 value={`item-${index}`}

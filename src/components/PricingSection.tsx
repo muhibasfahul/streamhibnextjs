@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Check, Gift, Zap } from 'lucide-react';
 import { useStore } from '@nanostores/react';
 import { languageStore } from '../stores/language';
-import { translations } from '../lib/translations';
+import { translations, type Language } from '../lib/translations';
 
 const subscriptionLinks = {
   starter: "https://streamhib.myr.id/pl/set-1-streamhib-lengkap-fitur-jadwal-live",
@@ -14,7 +14,7 @@ const subscriptionLinks = {
 
 export function PricingSection() {
   const language = useStore(languageStore);
-  const t = (key: keyof typeof translations.id) => translations[language][key] || translations.id[key];
+  const t = (key: keyof typeof translations.id) => translations[language as Language][key] || translations.id[key];
 
   const plans = [
     {

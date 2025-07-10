@@ -90,7 +90,7 @@ import Footer from '../components/Footer.astro';
 
   function updatePrivacyContent() {
     const language = localStorage.getItem('language') || 'id';
-    const t = translations[language] || translations.id;
+    const t = translations[language as keyof typeof translations] || translations.id;
 
     // Update title and last updated
     const titleElement = document.querySelector('.privacy-title');
@@ -104,7 +104,7 @@ import Footer from '../components/Footer.astro';
     if (contentElement) {
       contentElement.innerHTML = '';
       
-      t.sections.forEach((section, index) => {
+      t.sections.forEach((section: any) => {
         const sectionDiv = document.createElement('div');
         sectionDiv.className = 'space-y-2 not-prose';
         sectionDiv.innerHTML = `
