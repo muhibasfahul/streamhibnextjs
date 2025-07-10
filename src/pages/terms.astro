@@ -1,13 +1,38 @@
-// Lokasi: app/terms/page.tsx
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
 
-"use client";
+<Layout title="Terms of Service - StreamHib" description="Syarat dan ketentuan StreamHib">
+  <link rel="stylesheet" href="/src/styles/globals.css" />
+  
+  <Navbar />
+  
+  <main class="bg-gray-50 dark:bg-background">
+    <div class="container mx-auto max-w-4xl px-4 py-16 sm:py-24">
+      <div class="bg-white dark:bg-card rounded-lg border shadow-sm">
+        <div class="text-center p-6 border-b">
+          <h1 class="text-3xl font-bold terms-title">
+            Syarat dan Ketentuan
+          </h1>
+          <p class="text-sm text-gray-500 dark:text-gray-400 pt-1 terms-updated">
+            Terakhir diperbarui: 13 Juni 2025
+          </p>
+        </div>
+        <div class="p-6 prose prose-lg dark:prose-invert max-w-none">
+          <div id="terms-content">
+            <!-- Content will be populated by JavaScript -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <Footer />
+</Layout>
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { useLanguage } from '@/hooks/use-language';
-
-export default function TermsOfServicePage() {
-  const { language } = useLanguage();
-
+<script>
   const translations = {
     id: {
       pageTitle: "Syarat dan Ketentuan",
@@ -63,34 +88,42 @@ export default function TermsOfServicePage() {
     }
   };
 
-  const t = translations[language] || translations.id;
+  function updateTermsContent() {
+    const language = localStorage.getItem('language') || 'id';
+    const t = translations[language] || translations.id;
 
-  return (
-    <main className="bg-gray-50 dark:bg-background">
-      <div className="container mx-auto max-w-4xl px-4 py-16 sm:py-24">
-        <Card>
-          <CardHeader className="text-center">
-            <CardTitle className="text-3xl font-bold">
-              {t.pageTitle}
-            </CardTitle>
-            <p className="text-sm text-gray-500 dark:text-gray-400 pt-1">
-              {t.lastUpdated}
-            </p>
-          </CardHeader>
-          <CardContent className="prose prose-lg dark:prose-invert max-w-none">
-            {t.sections.map((section, index) => (
-              <div key={index} className="space-y-2 not-prose">
-                <h2 className="text-xl font-semibold text-gray-900 dark:text-white pt-4">
-                  {section.title}
-                </h2>
-                <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                  {section.content}
-                </p>
-              </div>
-            ))}
-          </CardContent>
-        </Card>
-      </div>
-    </main>
-  );
-}
+    // Update title and last updated
+    const titleElement = document.querySelector('.terms-title');
+    const updatedElement = document.querySelector('.terms-updated');
+    
+    if (titleElement) titleElement.textContent = t.pageTitle;
+    if (updatedElement) updatedElement.textContent = t.lastUpdated;
+
+    // Update content
+    const contentElement = document.getElementById('terms-content');
+    if (contentElement) {
+      contentElement.innerHTML = '';
+      
+      t.sections.forEach((section, index) => {
+        const sectionDiv = document.createElement('div');
+        sectionDiv.className = 'space-y-2 not-prose';
+        sectionDiv.innerHTML = `
+          <h2 class="text-xl font-semibold text-gray-900 dark:text-white pt-4">
+            ${section.title}
+          </h2>
+          <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+            ${section.content}
+          </p>
+        `;
+        contentElement.appendChild(sectionDiv);
+      });
+    }
+  }
+
+  // Update on page load
+  updateTermsContent();
+
+  // Listen for language changes
+  window.addEventListener('storage', updateTermsContent);
+  window.addEventListener('languageChanged', updateTermsContent);
+</script>

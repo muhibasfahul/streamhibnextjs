@@ -1,0 +1,107 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
+import { Video } from 'lucide-react';
+---
+
+<Layout title="Tutorial - StreamHib" description="Panduan lengkap penggunaan StreamHib untuk live streaming 24/7">
+  <link rel="stylesheet" href="/src/styles/globals.css" />
+  
+  <Navbar />
+  
+  <main class="bg-gray-50 dark:bg-background">
+    <div class="container mx-auto max-w-4xl px-4 py-16 sm:py-24">
+      <div class="bg-white dark:bg-card rounded-lg border shadow-sm">
+        <div class="text-center p-6 border-b">
+          <h1 class="text-3xl font-bold tutorial-title">
+            🎥 Panduan Lengkap Penggunaan StreamHib
+          </h1>
+        </div>
+        <div class="p-6">
+          <div class="space-y-4" id="tutorial-list">
+            <!-- Tutorial items will be populated by JavaScript -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <Footer />
+</Layout>
+
+<script>
+  // Tutorial data
+  const tutorialsData = {
+    id: {
+      pageTitle: '🎥 Panduan Lengkap Penggunaan StreamHib',
+      tutorials: [
+        { title: 'Tutorial Download dari Google Drive', url: 'https://youtu.be/oF7ao3PS2sA' },
+        { title: 'Tutorial Cara Live Manual YouTube', url: 'https://youtu.be/ggYNFEUrQWA' },
+        { title: 'Tutorial Cara Live Facebook', url: 'https://youtu.be/GBMkHpmpGkg' },
+        { title: 'Tutorial Cara Penjadwalan Live', url: 'https://youtu.be/5FfQbSuHw60' },
+        { title: 'Tutorial Cara Live Lagi tanpa atur Stream Key', url: 'https://youtu.be/EIqYm9mbgsw' },
+        { title: 'Tutorial Cara Buat Bitrate CBR di Filmora dan Capcut', url: 'https://youtu.be/3Fdl-OwKw8g' },
+        { title: 'Tutorial Cara Live Vertikal', url: 'https://youtu.be/ZLdsNlTzOpA' },
+        { title: 'Tutorial Menambah Live di 1 Channel', url: 'https://youtu.be/QLe_cFUHSO4' },
+      ],
+    },
+    en: {
+      pageTitle: '🎥 Comprehensive StreamHib Usage Guide',
+      tutorials: [
+        { title: 'Tutorial: Download from Google Drive', url: 'https://youtu.be/oF7ao3PS2sA' },
+        { title: 'Tutorial: Live Streaming YouTube Channels Manually', url: 'https://youtu.be/ggYNFEUrQWA' },
+        { title: 'Tutorial: Live Streaming on Facebook', url: 'https://youtu.be/GBMkHpmpGkg' },
+        { title: 'Tutorial: Scheduling Live Streams', url: 'https://youtu.be/5FfQbSuHw60' },
+        { title: 'Tutorial: Resume Live without Setting Stream Key', url: 'https://youtu.be/EIqYm9mbgsw' },
+        { title: 'Tutorial: Create CBR Bitrate in Filmora and Capcut', url: 'https://youtu.be/3Fdl-OwKw8g' },
+        { title: 'Tutorial: Vertical Live Streaming', url: 'https://youtu.be/ZLdsNlTzOpA' },
+        { title: 'Tutorial: Add Multiple Lives to One Channel', url: 'https://youtu.be/QLe_cFUHSO4' },
+      ],
+    },
+  };
+
+  function updateTutorialContent() {
+    const language = localStorage.getItem('language') || 'id';
+    const t = tutorialsData[language] || tutorialsData.id;
+
+    // Update page title
+    const titleElement = document.querySelector('.tutorial-title');
+    if (titleElement) {
+      titleElement.textContent = t.pageTitle;
+    }
+
+    // Update tutorial list
+    const tutorialList = document.getElementById('tutorial-list');
+    if (tutorialList) {
+      tutorialList.innerHTML = '';
+      
+      t.tutorials.forEach((tutorial, index) => {
+        const tutorialItem = document.createElement('a');
+        tutorialItem.href = tutorial.url;
+        tutorialItem.target = '_blank';
+        tutorialItem.rel = 'noopener noreferrer';
+        tutorialItem.className = 'flex items-center p-4 bg-white dark:bg-gray-900/50 rounded-lg shadow-sm hover:shadow-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-200';
+        
+        tutorialItem.innerHTML = `
+          <svg class="w-6 h-6 text-blue-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h1m4 0h1m6-10V7a3 3 0 11-6 0V4a3 3 0 016 0v3zm-6 0V7a3 3 0 11-6 0V4a3 3 0 016 0v3z"></path>
+          </svg>
+          <span class="font-medium text-gray-800 dark:text-gray-200">
+            ${tutorial.title}
+          </span>
+        `;
+        
+        tutorialList.appendChild(tutorialItem);
+      });
+    }
+  }
+
+  // Update on page load
+  updateTutorialContent();
+
+  // Listen for language changes
+  window.addEventListener('storage', updateTutorialContent);
+  window.addEventListener('languageChanged', updateTutorialContent);
+</script>

@@ -1,0 +1,135 @@
+---
+---
+
+<footer class="bg-gray-900 dark:bg-gray-950 text-white">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid md:grid-cols-4 gap-8">
+      <!-- Logo & Description -->
+      <div class="md:col-span-2">
+        <img
+          src="/streamhiblandscapetrnsprant.png"
+          alt="StreamHib Logo"
+          width="150"
+          height="40"
+          class="h-8 w-auto mb-4 brightness-0 invert"
+        />
+        <p class="text-gray-300 mb-4 leading-relaxed footer-desc">
+          StreamHib adalah solusi live streaming 24/7 yang berjalan otomatis dari server. Tanpa install, tanpa ribet, tanpa khawatir mati sendiri.
+        </p>
+        <div class="flex items-center space-x-4">
+          <div id="language-switcher-footer"></div>
+          <div id="theme-toggle-footer"></div>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="font-semibold text-white mb-4 footer-quick-links">Quick Links</h3>
+        <ul class="space-y-2">
+          <li><a href="#features" class="text-gray-300 hover:text-white transition-colors footer-features">Features</a></li>
+          <li><a href="#pricing" class="text-gray-300 hover:text-white transition-colors footer-pricing">Pricing</a></li>
+          <li><a href="#testimonials" class="text-gray-300 hover:text-white transition-colors footer-testimonials">Testimonials</a></li>
+          <li><a href="#faq" class="text-gray-300 hover:text-white transition-colors footer-faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <!-- Support -->
+      <div>
+        <h3 class="font-semibold text-white mb-4 footer-support">Support</h3>
+        <ul class="space-y-2">
+          <li><a href="mailto:support@streamhib.com" class="text-gray-300 hover:text-white transition-colors footer-email-support">📧 Email Support</a></li>
+          <li><a href="https://wa.me/6285722165165" class="text-gray-300 hover:text-white transition-colors footer-whatsapp-support">💬 WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+      <p class="text-gray-400 text-sm footer-rights">
+        © 2025 StreamHib. All rights reserved.
+      </p>
+      <div class="flex space-x-6 mt-4 md:mt-0">
+        <a href="/privacy" class="text-gray-400 hover:text-white text-sm transition-colors footer-privacy">Privacy Policy</a>
+        <a href="/terms" class="text-gray-400 hover:text-white text-sm transition-colors footer-terms">Terms of Service</a>
+        <a href="/cookies" class="text-gray-400 hover:text-white text-sm transition-colors footer-cookies">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Update footer text based on language
+  function updateFooterText() {
+    const language = localStorage.getItem('language') || 'id';
+    
+    const translations = {
+      id: {
+        footerDesc: 'StreamHib adalah solusi live streaming 24/7 yang berjalan otomatis dari server. Tanpa install, tanpa ribet, tanpa khawatir mati sendiri.',
+        quickLinks: 'Quick Links',
+        features: 'Fitur',
+        pricing: 'Harga',
+        testimonials: 'Testimoni',
+        faq: 'FAQ',
+        support: 'Support',
+        emailSupport: '📧 Email Support',
+        whatsappSupport: '💬 WhatsApp',
+        allRightsReserved: '© 2025 StreamHib. All rights reserved.',
+        privacyPolicy: 'Privacy Policy',
+        termsOfService: 'Terms of Service',
+        cookiePolicy: 'Cookie Policy'
+      },
+      en: {
+        footerDesc: 'StreamHib is a 24/7 live streaming solution that runs automatically from server. No installation, no hassle, no worry about sudden shutdown.',
+        quickLinks: 'Quick Links',
+        features: 'Features',
+        pricing: 'Pricing',
+        testimonials: 'Testimonials',
+        faq: 'FAQ',
+        support: 'Support',
+        emailSupport: '📧 Email Support',
+        whatsappSupport: '💬 WhatsApp',
+        allRightsReserved: '© 2025 StreamHib. All rights reserved.',
+        privacyPolicy: 'Privacy Policy',
+        termsOfService: 'Terms of Service',
+        cookiePolicy: 'Cookie Policy'
+      }
+    };
+
+    const t = translations[language] || translations.id;
+
+    // Update footer elements
+    const footerDesc = document.querySelector('.footer-desc');
+    const footerQuickLinks = document.querySelector('.footer-quick-links');
+    const footerFeatures = document.querySelector('.footer-features');
+    const footerPricing = document.querySelector('.footer-pricing');
+    const footerTestimonials = document.querySelector('.footer-testimonials');
+    const footerFaq = document.querySelector('.footer-faq');
+    const footerSupport = document.querySelector('.footer-support');
+    const footerEmailSupport = document.querySelector('.footer-email-support');
+    const footerWhatsappSupport = document.querySelector('.footer-whatsapp-support');
+    const footerRights = document.querySelector('.footer-rights');
+    const footerPrivacy = document.querySelector('.footer-privacy');
+    const footerTerms = document.querySelector('.footer-terms');
+    const footerCookies = document.querySelector('.footer-cookies');
+
+    if (footerDesc) footerDesc.textContent = t.footerDesc;
+    if (footerQuickLinks) footerQuickLinks.textContent = t.quickLinks;
+    if (footerFeatures) footerFeatures.textContent = t.features;
+    if (footerPricing) footerPricing.textContent = t.pricing;
+    if (footerTestimonials) footerTestimonials.textContent = t.testimonials;
+    if (footerFaq) footerFaq.textContent = t.faq;
+    if (footerSupport) footerSupport.textContent = t.support;
+    if (footerEmailSupport) footerEmailSupport.textContent = t.emailSupport;
+    if (footerWhatsappSupport) footerWhatsappSupport.textContent = t.whatsappSupport;
+    if (footerRights) footerRights.textContent = t.allRightsReserved;
+    if (footerPrivacy) footerPrivacy.textContent = t.privacyPolicy;
+    if (footerTerms) footerTerms.textContent = t.termsOfService;
+    if (footerCookies) footerCookies.textContent = t.cookiePolicy;
+  }
+
+  // Update on page load
+  updateFooterText();
+
+  // Listen for language changes
+  window.addEventListener('storage', updateFooterText);
+  window.addEventListener('languageChanged', updateFooterText);
+</script>

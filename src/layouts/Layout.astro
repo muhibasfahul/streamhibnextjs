@@ -1,0 +1,68 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { 
+  title = 'StreamHib - Tool Live Streaming 24/7 Tanpa Komputer | Server Streaming Otomatis',
+  description = 'StreamHib adalah tool live streaming 24/7 yang berjalan otomatis dari server. Live streaming tanpa komputer, tanpa ribet, tanpa khawatir mati sendiri. Coba gratis sekarang!'
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- SEO Meta Tags -->
+    <title>{title}</title>
+    <meta name="keywords" content="tool live streaming, live streaming 24/7, streaming otomatis, server streaming, live streaming tanpa komputer, streaming youtube otomatis" />
+    <meta name="author" content="StreamHib" />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="StreamHib - Tool Live Streaming 24/7 Tanpa Komputer" />
+    <meta property="og:description" content="Live streaming otomatis dari server. Tanpa install, tanpa takut mati sendiri. Setting 1x, live terus!" />
+    <meta property="og:url" content="https://streamhib.com" />
+    <meta property="og:site_name" content="StreamHib" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:type" content="website" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="StreamHib - Tool Live Streaming 24/7 Tanpa Komputer" />
+    <meta name="twitter:description" content="Live streaming otomatis dari server. Tanpa install, tanpa takut mati sendiri. Setting 1x, live terus!" />
+    
+    <!-- Robots -->
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Theme Script -->
+    <script is:inline>
+      // Theme initialization
+      const getThemePreference = () => {
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+          return localStorage.getItem('theme');
+        }
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      };
+      
+      const isDark = getThemePreference() === 'dark';
+      document.documentElement.classList[isDark ? 'add' : 'remove']('dark');
+      
+      if (typeof localStorage !== 'undefined') {
+        const observer = new MutationObserver(() => {
+          const isDark = document.documentElement.classList.contains('dark');
+          localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+        observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+      }
+    </script>
+  </head>
+  <body class="min-h-screen bg-background text-foreground">
+    <slot />
+  </body>
+</html>

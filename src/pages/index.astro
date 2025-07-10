@@ -1,0 +1,83 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import { HeroSection } from '../components/HeroSection';
+import { FeaturesSection } from '../components/FeaturesSection';
+import { TestimonialsSection } from '../components/TestimonialsSection';
+import { PricingSection } from '../components/PricingSection';
+import { FAQSection } from '../components/FAQSection';
+import Footer from '../components/Footer.astro';
+import { LanguageSwitcher } from '../components/LanguageSwitcher';
+import { ThemeToggle } from '../components/ThemeToggle';
+---
+
+<Layout>
+  <link rel="stylesheet" href="/src/styles/globals.css" />
+  
+  <Navbar />
+  
+  <main class="min-h-screen">    
+    <HeroSection client:load />
+    <FeaturesSection client:load />
+    <TestimonialsSection client:load />
+    <PricingSection client:load />
+    <FAQSection client:load />
+  </main>
+  
+  <Footer />
+  
+  <!-- Mount React components for language switcher and theme toggle -->
+  <div id="language-switcher-desktop" style="display: contents;"></div>
+  <div id="language-switcher-mobile" style="display: contents;"></div>
+  <div id="language-switcher-footer" style="display: contents;"></div>
+  <div id="theme-toggle-desktop" style="display: contents;"></div>
+  <div id="theme-toggle-mobile" style="display: contents;"></div>
+  <div id="theme-toggle-footer" style="display: contents;"></div>
+</Layout>
+
+<script>
+  import { createRoot } from 'react-dom/client';
+  import { createElement } from 'react';
+  import { LanguageSwitcher } from '../components/LanguageSwitcher';
+  import { ThemeToggle } from '../components/ThemeToggle';
+
+  // Mount LanguageSwitcher components
+  const languageSwitcherDesktop = document.getElementById('language-switcher-desktop');
+  const languageSwitcherMobile = document.getElementById('language-switcher-mobile');
+  const languageSwitcherFooter = document.getElementById('language-switcher-footer');
+  
+  if (languageSwitcherDesktop) {
+    const root = createRoot(languageSwitcherDesktop);
+    root.render(createElement(LanguageSwitcher));
+  }
+  
+  if (languageSwitcherMobile) {
+    const root = createRoot(languageSwitcherMobile);
+    root.render(createElement(LanguageSwitcher));
+  }
+  
+  if (languageSwitcherFooter) {
+    const root = createRoot(languageSwitcherFooter);
+    root.render(createElement(LanguageSwitcher));
+  }
+
+  // Mount ThemeToggle components
+  const themeToggleDesktop = document.getElementById('theme-toggle-desktop');
+  const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+  const themeToggleFooter = document.getElementById('theme-toggle-footer');
+  
+  if (themeToggleDesktop) {
+    const root = createRoot(themeToggleDesktop);
+    root.render(createElement(ThemeToggle));
+  }
+  
+  if (themeToggleMobile) {
+    const root = createRoot(themeToggleMobile);
+    root.render(createElement(ThemeToggle));
+  }
+  
+  if (themeToggleFooter) {
+    const root = createRoot(themeToggleFooter);
+    root.render(createElement(ThemeToggle));
+  }
+</script>
